@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="V2DO.Views.LoginView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:lang="clr-namespace:V2DO.Resources.Languages"
+    Title="LoginView">
+    <VerticalStackLayout Padding="20">
+        <Label
+            FontAttributes="Bold"
+            FontSize="{StaticResource FontSizeLarge}"
+            Text="{x:Static lang:AppResources.Bienvenido}" />
+        <Label
+            FontAttributes="Bold"
+            FontSize="24"
+            Text="{x:Static lang:AppResources.InicioSesion}" />
+        <Entry x:Name="UsernameEntry" />
+
+        <Label
+            FontAttributes="Bold"
+            FontSize="24"
+            Text="{x:Static lang:AppResources.Contrasena}" />
+        <Entry x:Name="PasswordEntry" IsPassword="False" />
+        <Picker Title="{x:Static lang:AppResources.SeleccionarIdioma}" SelectedIndexChanged="OnLanguageChanged">
+            <Picker.Items>
+                <x:String>es</x:String>
+                <x:String>en</x:String>
+            </Picker.Items>
+        </Picker>
+
+    </VerticalStackLayout>
+</ContentPage>
